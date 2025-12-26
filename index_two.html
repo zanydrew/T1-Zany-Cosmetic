@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZANY COSMETIC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=confirmation_number" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NOTIFICATION BAR -->
+    <div class="top-bar">
+        <span class="material-symbols-outlined confirmation_number">confirmation_number</span>
+        <span>New holiday gift sets here <a href="javascript:void(0)" onclick="showCategory('lips')">Shop Now</a></span>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="logo">ZANY COSMETIC</div>
+
+        <nav class="nav-links">
+            <a href="javascript:void(0)" onclick="showPage('home-section')">Home</a>
+            <a href="javascript:void(0)" onclick="showCategory('lips')">Lips</a>
+            <a href="javascript:void(0)" onclick="showCategory('face')">Face</a>
+            <a href="javascript:void(0)" onclick="showCategory('eyes')">Eyes & Brows</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+
+        <div class="nav-icons">
+            <a href="javascript:void(0)" onclick="showPage('wishlist-page')"><i class="fas fa-heart"></i></a>
+            <a href="javascript:void(0)" onclick="showPage('search-page')"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="javascript:void(0)" onclick="showPage('profile-page')"><i class="fa-regular fa-user"></i></a>
+            <a href="javascript:void(0)" onclick="showPage('cart-page')">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT SECTION -->
+    <main id="main-content">
+        <!-- Home Section -->
+        <section id="home-section" class="page-section">
+            <!-- Hero Slider -->
+                <div class="hero">
+                <img src="landing_page2.webp" alt="Hero Banner">
+                <div class="hero-text">
+                    <h1>Make you shine<br>Everywhere</h1>
+                    <button class="btn btn-primary" onclick="showCategory('lips')">Shop Now</button>
+                </div>
+            </div>
+
+            <!-- Categories -->
+            <section class="categories">
+                <h2>Shop by Category</h2>
+                <div class="category-grid">
+                    <!-- LIPS -->
+                    <div class="cat-item item-lips" onclick="showCategory('lips')">
+                        <div class="text-overlay">
+                            <h3>Lips</h3>
+                            <a href="javascript:void(0)">Shop Now →</a>
+                        </div>
+                    </div>
+
+                    <!-- Face  -->
+                    <div class="cat-item item-face" onclick="showCategory('face')">
+                        <div class="text-overlay">
+                            <h3>Face</h3>
+                            <a href="javascript:void(0)">Shop Now →</a>
+                        </div>
+                    </div>
+                    <!-- Eyes & Brows -->
+                        <div class="cat-item item-eyes" onclick="showCategory('eyes')">
+                            <div class="text-overlay">
+                                <h3>Eyes & Brows</h3>
+                                <a href="javascript:void(0)">Shop Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Product Cards -->
+            <section class="products">
+                <div class="products-inner-container">
+                    <div class="section-header">
+                        <h2>On Trend</h2>
+                    </div>
+                    <div class="product-grid">
+                        <div class="product-card" onclick="openProduct({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp', desc: 'A long-lasting volume mascara for bold lashes.'})">
+                            <div class="product-image-container">
+                                <img src="mascara_front_pic.webp" alt="Volume Mascara">
+                                <div class="tag hot">HOT</div>
+                                <div class="wishlist-icon" onclick="event.stopPropagation(); addToWishlist({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">&#x2661;</div>
+                                <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">Add to cart</button>
+                            </div>
+                            <div class="product-details">
+                                <p>Volume Mascara</p>
+                                <p class="price">$35.00</p>
+                            </div>
+                        </div>
+
+                        <div class="product-card" onclick="openProduct({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp', desc: 'A long-lasting volume mascara for bold lashes.'})">
+                            <div class="product-image-container">
+                                <img src="nudenectar.webp" alt="nude nectar">
+                                <div class="tag hot">HOT</div>
+                                <div class="wishlist-icon" onclick="event.stopPropagation(); addToWishlist({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">&#x2661;</div>
+                                <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">Add to cart</button>
+                            </div>
+                            <div class="product-details">
+                                <p>nude nectar</p>
+                                <p class="price">$17.00</p>
+                            </div>
+                        </div>
+
+                        <div class="product-card" onclick="openProduct({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp', desc: 'A long-lasting volume mascara for bold lashes.'})">
+                            <div class="product-image-container">
+                                <img src="mascara_front_pic.webp" alt="Volume Mascara">
+                                <div class="tag hot">HOT</div>
+                                <div class="wishlist-icon" onclick="event.stopPropagation(); addToWishlist({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">&#x2661;</div>
+                                <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">Add to cart</button>
+                            </div>
+                            <div class="product-details">
+                                <p>Volume Mascara</p>
+                                <p class="price">$35.00</p>
+                            </div>
+                        </div>
+
+                        <div class="product-card" onclick="openProduct({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp', desc: 'A long-lasting volume mascara for bold lashes.'})">
+                            <div class="product-image-container">
+                                <img src="mascara_front_pic.webp" alt="Volume Mascara">
+                                <div class="tag hot">HOT</div>
+                                <div class="wishlist-icon" onclick="event.stopPropagation(); addToWishlist({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">&#x2661;</div>
+                                <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">Add to cart</button>
+                            </div>
+                            <div class="product-details">
+                                <p>Volume Mascara</p>
+                                <p class="price">$35.00</p>
+                            </div>
+                        </div>
+
+                        <div class="product-card" onclick="openProduct({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp', desc: 'A long-lasting volume mascara for bold lashes.'})">
+                            <div class="product-image-container">
+                                <img src="mascara_front_pic.webp" alt="Volume Mascara">
+                                <div class="tag hot">HOT</div>
+                                <div class="wishlist-icon" onclick="event.stopPropagation(); addToWishlist({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">&#x2661;</div>
+                                <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">Add to cart</button>
+                            </div>
+                            <div class="product-details">
+                                <p>Volume Mascara</p>
+                                <p class="price">$35.00</p>
+                            </div>
+                        </div>
+
+                        <div class="product-card" onclick="openProduct({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp', desc: 'A long-lasting volume mascara for bold lashes.'})">
+                            <div class="product-image-container">
+                                <img src="mascara_front_pic.webp" alt="Volume Mascara">
+                                <div class="tag hot">HOT</div>
+                                <div class="wishlist-icon" onclick="event.stopPropagation(); addToWishlist({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">&#x2661;</div>
+                                <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">Add to cart</button>
+                            </div>
+                            <div class="product-details">
+                                <p>Volume Mascara</p>
+                                <p class="price">$35.00</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Holiday Gift Section -->
+            <section class="holiday">
+                <div class="holiday-text">
+                    <h2>NEW HOLIDAY GIFT SETS</h2>
+                    <p>Featuring our best-selling products with special prices.</p>
+                    <button class="btn btn-primary" onclick="showCategory('lips')">Shop Now</button>
+                </div>
+                <img src="holiday-banner.webp" alt="Holiday Gift Sets">
+            </section>
+
+            <section class="products">
+                <div class="products-inner-container">
+                    <div class="section-header">
+                        <h2>New Collection</h2>
+                    </div>
+                    <div class="product-grid">
+                        <div class="product-card" onclick="openProduct({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp', desc: 'A long-lasting volume mascara for bold lashes.'})">
+                            <div class="product-image-container">
+                                <img src="mascara_front_pic.webp" alt="Volume Mascara">
+                                <div class="tag hot">HOT</div>
+                                <div class="wishlist-icon" onclick="event.stopPropagation(); addToWishlist({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">&#x2661;</div>
+                                <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">Add to cart</button>
+                            </div>
+                            <div class="product-details">
+                                <p>Volume Mascara</p>
+                                <p class="price">$35.00</p>
+                            </div>
+                        </div>
+
+                        <div class="product-card" onclick="openProduct({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp', desc: 'A long-lasting volume mascara for bold lashes.'})">
+                            <div class="product-image-container">
+                                <img src="nudenectar.webp" alt="nude nectar">
+                                <div class="tag hot">HOT</div>
+                                <div class="wishlist-icon" onclick="event.stopPropagation(); addToWishlist({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">&#x2661;</div>
+                                <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">Add to cart</button>
+                            </div>
+                            <div class="product-details">
+                                <p>nude nectar</p>
+                                <p class="price">$17.00</p>
+                            </div>
+                        </div>
+
+                        <div class="product-card" onclick="openProduct({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp', desc: 'A long-lasting volume mascara for bold lashes.'})">
+                            <div class="product-image-container">
+                                <img src="mascara_front_pic.webp" alt="Volume Mascara">
+                                <div class="tag hot">HOT</div>
+                                <div class="wishlist-icon" onclick="event.stopPropagation(); addToWishlist({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">&#x2661;</div>
+                                <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">Add to cart</button>
+                            </div>
+                            <div class="product-details">
+                                <p>Volume Mascara</p>
+                                <p class="price">$35.00</p>
+                            </div>
+                        </div>
+
+                        <div class="product-card" onclick="openProduct({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp', desc: 'A long-lasting volume mascara for bold lashes.'})">
+                            <div class="product-image-container">
+                                <img src="mascara_front_pic.webp" alt="Volume Mascara">
+                                <div class="tag hot">HOT</div>
+                                <div class="wishlist-icon" onclick="event.stopPropagation(); addToWishlist({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">&#x2661;</div>
+                                <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">Add to cart</button>
+                            </div>
+                            <div class="product-details">
+                                <p>Volume Mascara</p>
+                                <p class="price">$35.00</p>
+                            </div>
+                        </div>
+
+                        <div class="product-card" onclick="openProduct({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp', desc: 'A long-lasting volume mascara for bold lashes.'})">
+                            <div class="product-image-container">
+                                <img src="mascara_front_pic.webp" alt="Volume Mascara">
+                                <div class="tag hot">HOT</div>
+                                <div class="wishlist-icon" onclick="event.stopPropagation(); addToWishlist({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">&#x2661;</div>
+                                <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">Add to cart</button>
+                            </div>
+                            <div class="product-details">
+                                <p>Volume Mascara</p>
+                                <p class="price">$35.00</p>
+                            </div>
+                        </div>
+
+                        <div class="product-card" onclick="openProduct({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp', desc: 'A long-lasting volume mascara for bold lashes.'})">
+                            <div class="product-image-container">
+                                <img src="mascara_front_pic.webp" alt="Volume Mascara">
+                                <div class="tag hot">HOT</div>
+                                <div class="wishlist-icon" onclick="event.stopPropagation(); addToWishlist({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">&#x2661;</div>
+                                <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart({name: 'Volume Mascara', price: 35.00, img: 'mascara_front_pic.webp'})">Add to cart</button>
+                            </div>
+                            <div class="product-details">
+                                <p>Volume Mascara</p>
+                                <p class="price">$35.00</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- TikTok Review Videos -->
+            <section class="reviews">
+                <h2 class="section-title">Reviews</h2>
+                <div class="review-grid">
+                    <div class="review-card">
+                        <video class="review-video" autoplay muted loop poster="poster1.jpg">
+                            <source src="review1.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-overlay">
+                            <p class="product-name">cosmic 2</p>
+                            <p class="user-handle">@mirandawillcry</p>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <video class="review-video" muted loop>
+                            <source src="review2.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-overlay">
+                            <p class="product-name">Tik Tok video here</p>
+                            <p class="user-handle">@teaisapotion</p>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <video class="review-video" muted loop>
+                            <source src="review3.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-overlay">
+                            <p class="product-name">cosmic 2.0</p>
+                            <p class="user-handle">@bellakrys</p>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <video class="review-video" muted loop>
+                            <source src="review4.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-overlay">
+                            <p class="product-name">cosmic 2.0</p>
+                            <p class="user-handle">@bellakrys</p>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <video class="review-video" muted loop>
+                            <source src="review5.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-overlay">
+                            <p class="product-name">cosmic 2.0</p>
+                            <p class="user-handle">@bellakrys</p>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <video class="review-video" muted loop>
+                            <source src="review6.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-overlay">
+                            <p class="product-name">cosmic 2.0</p>
+                            <p class="user-handle">@bellakrys</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Icon Features -->
+            <section class="features">
+                <div class="feature-box">
+                    <i class="fa-solid fa-truck"></i>
+                    <p>Free Shipping</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-money-bill"></i>
+                    <p>Money-back</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <p>Secure Payments</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>24/7 Support</p>
+                </div>
+            </section>
+        </section>
+
+        <!-- Category View Section -->
+        <section id="category-view" class="page-section" style="display: none;">
+            <div class="category-banner" id="category-banner">
+                <div class="banner-content">
+                    <p class="breadcrumbs">Home / <span id="cat-title"></span></p>
+                    <h1 id="banner-title"></h1>
+                    <p class="banner-tagline">It's not a want, it's a need.</p>
+                </div>
+            </div>
+
+            <main class="shop-content-wrapper">
+                <div class="shop-control-bar">
+                    <div class="filter-dropdown">
+                        <label for="categories">CATEGORIES</label>
+                        <select id="categories" class="custom-select">
+                            <option>All products</option>
+                            <option>Lips</option>
+                            <option>Face</option>
+                            <option>Eyes & Brows</option>
+                        </select>
+                    </div>
+                    <div class="sort-dropdown">
+                        <label for="sort-by">Sort by</label>
+                        <select id="sort-by" class="custom-select">
+                            <option>Featured</option>
+                            <option>Newest</option>
+                            <option>Best Selling</option>
+                            <option>Price (Low to High)</option>
+                            <option>Price (High to Low)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="shop-product-grid" id="product-list">
+                    <!-- Product cards will be populated by JavaScript -->
+                </div>
+
+                <button class="show-more-btn">Show More</button>
+            </main>
+        </section>
+
+        <!-- Product Detail Section -->
+        <section id="product-detail" class="page-section" style="display: none;">
+            <div class="product-page">
+                <div class="product-container">
+                    <div class="product-image">
+                        <img id="det-img" src="" alt="Product Image">
+                    </div>
+                    <div class="product-info">
+                        <h1 id="det-name">Product Name</h1>
+                        <p class="price">$<span id="det-price">0.00</span></p>
+                        <p class="description" id="det-desc">Product description will appear here.</p>
+                        <button class="add-to-cart-btn" id="detail-add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wishlist Page Section --> 
+        <section id="wishlist-page" class="page-section" style="display: none;">
+            <div class="wishlist-container">
+                <h2 class="wishlist-title">WISHLIST</h2>
+        
+                    <div id="wishlist-grid" class="wishlist-grid">
+                    </div>
+
+                    <div id="wishlist-empty" style="display: none; text-align: center; margin-top: 50px;">
+            <p>Your wishlist is currently empty.</p>
+             </div>
+            </div>
+        </section>
+
+        <!-- Search Page Section -->
+        <section id="search-page" class="page-section" style="display: none;">
+            <div class="search-container">
+                <div class="search-header">
+                    <h2>Search Products</h2>
+                    <div class="search-input-group">
+                        <input type="text" id="search-input" placeholder="Search for products..." onkeyup="handleSearch()">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="search-results-container">
+                    <div id="search-results" class="shop-product-grid">
+                        <p style="grid-column: 1/-1; text-align: center; color: #888;">Start typing to find products...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Page Section -->
+        <section id="profile-page" class="page-section" style="display: none;">
+            <div class="profile-container">
+                <div class="profile-header">
+                    <h1>My Account</h1>
+                    <p>Manage your profile and orders</p>
+                </div>
+                
+                <div class="profile-content">
+                    <div class="profile-sidebar">
+                        <div class="profile-user">
+                            <div class="profile-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <h3>Welcome, User</h3>
+                        </div>
+                        <nav class="profile-nav">
+                            <a href="javascript:void(0)" class="active" onclick="showProfileTab('dashboard')">
+                                <i class="fas fa-home"></i> Dashboard
+                            </a>
+                            <a href="javascript:void(0)" onclick="showProfileTab('orders')">
+                                <i class="fas fa-shopping-bag"></i> My Orders
+                            </a>
+                            <a href="javascript:void(0)" onclick="showProfileTab('wishlist')">
+                                <i class="fas fa-heart"></i> Wishlist
+                            </a>
+                            <a href="javascript:void(0)" onclick="showProfileTab('address')">
+                                <i class="fas fa-map-marker-alt"></i> Addresses
+                            </a>
+                            <a href="javascript:void(0)" onclick="showProfileTab('settings')">
+                                <i class="fas fa-cog"></i> Account Settings
+                            </a>
+                            <a href="javascript:void(0)" onclick="logout()">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </nav>
+                    </div>
+                    
+                    <div class="profile-main">
+                        <!-- Dashboard Tab -->
+                        <div id="dashboard-tab" class="profile-tab active">
+                            <h2>Dashboard</h2>
+                            <div class="dashboard-stats">
+                                <div class="stat-card">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <h3>0</h3>
+                                    <p>Total Orders</p>
+                                </div>
+                                <div class="stat-card">
+                                    <i class="fas fa-heart"></i>
+                                    <h3>0</h3>
+                                    <p>Wishlist Items</p>
+                                </div>
+                                <div class="stat-card">
+                                    <i class="fas fa-star"></i>
+                                    <h3>0</h3>
+                                    <p>Reviews</p>
+                                </div>
+                            </div>
+                            <div class="recent-orders">
+                                <h3>Recent Orders</h3>
+                                <p class="no-orders">You haven't placed any orders yet.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Orders Tab -->
+                        <div id="orders-tab" class="profile-tab">
+                            <h2>My Orders</h2>
+                            <div class="orders-list">
+                                <div class="empty-state">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <h3>No orders yet</h3>
+                                    <p>Start shopping to see your orders here</p>
+                                    <button class="btn-primary" onclick="showPage('home-section')">Start Shopping</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Wishlist Tab -->
+                        <div id="wishlist-tab" class="profile-tab">
+                            <h2>My Wishlist</h2>
+                            <div class="wishlist-grid" id="wishlist-items">
+                                <!-- Wishlist items will be populated by JavaScript -->
+                            </div>
+                            <div class="empty-wishlist" id="empty-wishlist">
+                                <i class="fas fa-heart"></i>
+                                <h3>Your wishlist is empty</h3>
+                                <p>Add products you love to your wishlist</p>
+                                <button class="btn-primary" onclick="showPage('home-section')">Browse Products</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Address Tab -->
+                        <div id="address-tab" class="profile-tab">
+                            <h2>My Addresses</h2>
+                            <div class="addresses-list">
+                                <div class="address-card">
+                                    <h3>Shipping Address</h3>
+                                    <p>No address added yet</p>
+                                    <button class="btn-secondary">Add Address</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Settings Tab -->
+                        <div id="settings-tab" class="profile-tab">
+                            <h2>Account Settings</h2>
+                            <form class="settings-form">
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <input type="text" placeholder="Enter your full name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email Address</label>
+                                    <input type="email" placeholder="Enter your email">
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone Number</label>
+                                    <input type="tel" placeholder="Enter your phone number">
+                                </div>
+                                <button type="submit" class="btn-primary">Save Changes</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Page Section -->
+        <section id="cart-page" class="page-section" style="display: none;">
+            <div class="cart-container">
+                <div class="cart-header">
+                    <h1>Cart</h1>
+                    <p id="cart-count-text">0 items in your cart</p>
+                </div>
+                
+                <div class="cart-content">
+                    <div class="cart-items-container">
+                        <div class="cart-items-header">
+                            <h2>Items</h2>
+                            <div class="cart-header-right">
+                                <span>Price</span>
+                                <span>Quantity</span>
+                                <span>Total</span>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-items" id="cart-items">
+                            <!-- Cart items will be populated by JavaScript -->
+                            <div class="empty-cart" id="empty-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                <h3>Your cart is empty</h3>
+                                <p>Add some products to your cart</p>
+                                <button class="btn-primary" onclick="showPage('home-section')">Continue Shopping</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-summary">
+                        <h2>Card Summary</h2>
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <span id="subtotal">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Shipping</span>
+                                <span id="shipping">$0.00</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total</span>
+                                <span id="cart-total">$0.00</span>
+                            </div>
+                        </div>
+                        <button class="btn-checkout" id="checkout-btn" disabled>Checkout</button>
+                        <button class="btn-continue" onclick="showPage('home-section')">Continue Shopping</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--  NEWSLETTER -->
+    <section class="newsletter">
+        <div class="newsletter-content-box">
+            <h3>Join Our Newsletter</h3>
+            <p>Sign up for deals, new products and promotions</p>
+            <form class="newsletter-form">
+                <div class="newsletter-box">
+                    <input type="email" placeholder="Email address" required>
+                </div>
+                <div class="newsletter-box">
+                    <button type="submit">Sign up</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content-wrapper">
+            <div class="footer-grid">
+                <div class="footer-left">
+                    <h3 class="footer-logo">ZANY COSMETIC</h3>
+                    <p class="tagline">Make you shine everywhere</p>
+                    <div class="socials">
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4 class="link-heading">Page</h4>
+                    <ul>
+                        <li><a href="javascript:void(0)" onclick="showPage('home-section')">Home</a></li>
+                        <li><a href="javascript:void(0)" onclick="showCategory('lips')">Lips</a></li>
+                        <li><a href="javascript:void(0)" onclick="showCategory('face')">Face</a></li>
+                        <li><a href="javascript:void(0)" onclick="showCategory('eyes')">Eyes & Brows</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 class="link-heading">Info</h4>
+                    <ul>
+                        <li><a href="#">Payment</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return & Refund</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 class="link-heading">Help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Live Chat</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="payment-icons">
+                <h4 class="payment-title">We accept:</h4>
+                <img src="aba_payment.png" alt="aba" class="payment-icon">
+                <img src="visa_card.png" alt="visa" class="payment-icon">
+                <img src="master_card.png" alt="mastercard" class="payment-icon">
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 ZANY COSMETIC. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="script2.js"></script>
+</body>
+</html>
